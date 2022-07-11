@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdarg.h>
 /**
  * get_format - Function pointer
  *
@@ -14,9 +13,9 @@ int (*get_format(const char *format))(va_list)
 	unsigned int index;
 	/* in occurence of c call function print_c.*/
 	print_type specifier[] = {
-		{"c", print_c}
-		{"NULL", NULL}
-	}
+		{"c", print_c},
+		{NULL, NULL}
+	};
 
 	for (index = 0; specifier[index].type != NULL; index++)
 	{
@@ -77,6 +76,6 @@ int _printf(const char *format, ...)
 		}
 		index++;
 	}
-	va_end(a_list)
+	va_end(a_list);
 	return (count);
 }
