@@ -39,7 +39,7 @@ int _printf(const char *format, ...)
 	int (*f)(va_list);
 	unsigned int index = 0, count = 0;
 	
-	if (!format || format == NULL || (format[0] == '%' && !format[1]) || (format[0] == '%' && format[1] == ' ' && !format[2]))
+	if (!format || format == NULL)
 		return (-1);
 	va_start(a_list, format);
 	while (format && format[index])
