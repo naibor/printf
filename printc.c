@@ -11,10 +11,10 @@
  */
 int print_c(va_list ch)
 {
-	char str = (char)va_arg(va_list ch, int);
+	char str = (char)va_arg(ch, int);
 
 	_putchar(str);
-	va_end(va_list ch);
+	va_end(ch);
 	return (0);
 }
 

@@ -8,7 +8,7 @@
  */
 int print_s(va_list ch)
 {
-	 char str = (char)va_arg(va_list ch, char *);
+	 char *str = va_arg(ch, char *);
 	 unsigned int index;
 
 	if (str == NULL)
@@ -18,7 +18,7 @@ int print_s(va_list ch)
 		_putchar(str[index]);
 	}
 
-	va_end(va_list ch);
+	va_end(ch);
 	return (index);
 }
 
