@@ -10,9 +10,16 @@
 int print_s(va_list ch)
 {
 	 char str = (char)va_arg(va_list ch, char *);
+	 unsigned int index;
 
-        _putchar(str);
+	 if (str == NULL)
+		str = "(null)";
+	 for (index = 0; str[index]; index++)
+	 {
+		_putchar(str[index]);
+	 }
+
         va_end(va_list ch);
-        return (0);
+        return (index);
 }
 
