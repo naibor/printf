@@ -1,7 +1,5 @@
 #include "main.h"
-#include <stdio.h>
 #include <stdarg.h>
-
 /**
  * get_format - Function pointer
  *
@@ -25,14 +23,6 @@ int (*get_format(const char *format))(va_list)
 	}
 	return (specifier[index].f);
 }
-
-
-
-
-
-
-
-
 /**
  * _printf -  Function
  * Description: produces output according to a format.
@@ -44,6 +34,8 @@ int (*get_format(const char *format))(va_list)
 int _printf(const char *format, ...)
 {
 	va_list a_list;
+	int (*f)(va_list);
+	unsigned int index = 0, count = 0;
 
 	if (!format || format == NULL)
 	{
@@ -52,11 +44,40 @@ int _printf(const char *format, ...)
 
 	va_start(a_list, format);
 	
-	/*va_list a_list;*/
-	printf("THIS IS FORMAT:%s\n", format);
-	printf("INDXES OF FORMAT: %c\n", format[0]);
-	/*va_start(format, a_list);*/
-
-	
-        return (0);
+	while (format && format[index])
+	{
+		/*checks if we have a astring without % formatter*/
+		if (format[index] != '%')
+		{
+			_putchar (format[index]);
+			index++;
+			count++;
+			continue;
+		}
+		/*when we have % within string*/
+		else
+		{
+			/*if there are two %% print out %*/
+			if (format[index + 1] == '%')
+			{
+				_putchar('%');
+				index += 2;
+				count++;
+				continue;
+			}
+			/*look for character within specifier array*/
+			else
+			{
+				f = get_format(&format[index + 1]);
+				if (f == NULL)
+					return (-1);
+				index += 2;
+				count += f(a_list);
+				continue;
+			}
+		}
+		index++;
+	}
+	va_end(a_list)
+        return (count);
 }
