@@ -16,5 +16,5 @@ typedef struct print
 
 int _putchar(char c);
 int _printf(const char *format, ...);
-
+int (*get_format(const char *format))(va_list);
 #endif
