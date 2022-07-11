@@ -7,12 +7,12 @@
  *
  * return: 0 (success)
  */
-int print_d(va_list d)
+int print_d(va_list i)
 {
-	int d = va_arg(d, int);
+	int d = va_arg(i, int);
 
 	_putchar(d);
-	va_end(va_list d);
+	va_end(i);
 	return (0);
 }
 
