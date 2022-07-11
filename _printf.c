@@ -14,6 +14,8 @@ int (*get_format(const char *format))(va_list)
 	/* in occurence of c call function print_c.*/
 	print_type specifier[] = {
 		{"c", print_c},
+		{"s", print_s},
+		{"d", print_d},
 		{NULL, NULL}
 	};
 
