@@ -31,7 +31,7 @@ int (*get_format(const char *format))(va_list)
  * _printf -  Function
  * Description: produces output according to a format.
  *
- * @format: pointer parameter 
+ * @format: pointer parameter
  *
  * Return: number of characters printed
  */
@@ -42,12 +42,8 @@ int _printf(const char *format, ...)
 	unsigned int index = 0, count = 0;
 
 	if (!format || format == NULL)
-	{
 		return (-1);
-	}
-
 	va_start(a_list, format);
-	
 	while (format && format[index])
 	{
 		/*checks if we have a astring without % formatter*/
@@ -83,5 +79,5 @@ int _printf(const char *format, ...)
 		index++;
 	}
 	va_end(a_list)
-        return (count);
+	return (count);
 }
