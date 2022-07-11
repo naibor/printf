@@ -1,8 +1,6 @@
 #include "main.h"
 /*
- * print_s - prints string
- *
- * description: prints a string
+ * print_s - Function prints string
  *
  * @ch: parameter used
  *

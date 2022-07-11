@@ -13,7 +13,6 @@ int (*get_format(const char *format))(va_list)
 {
 	unsigned int index;
 	/* in occurence of c call function print_c.*/
-
 	print_type specifier[] = {
 		{"c", print_c}
 		{"NULL", NULL}
