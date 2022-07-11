@@ -15,7 +15,7 @@ int (*get_format(const char *format))(va_list)
 {
 	unsigned int index;
 	print_type specifier[] = {
-		
+		{"c", print_c}
 	}
 
 	for (index = 0; specifier[index].type != NULL; index++)
