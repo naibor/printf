@@ -25,14 +25,6 @@ int (*get_format(const char *format))(va_list)
 	}
 	return (specifier[index].f);
 }
-
-
-
-
-
-
-
-
 /**
  * _printf -  Function
  * Description: produces output according to a format.
@@ -45,7 +37,7 @@ int _printf(const char *format, ...)
 {
 	va_list a_list;
 
-	if (!format || format == NULL)
+	if (!format || format == NULL || (format[0] == '%' && !format[1]) || (format[0] == '%' && format[1] == ' ' && !format[2]))
 	{
 		return (-1);
 	}
