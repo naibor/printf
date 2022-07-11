@@ -14,12 +14,16 @@
 int (*get_format(const char *format))(va_list)
 {
 	unsigned int index;
+	/* in occurence of c call function print_c.*/
+
 	print_type specifier[] = {
 		{"c", print_c}
+		{"NULL", NULL}
 	}
 
 	for (index = 0; specifier[index].type != NULL; index++)
 	{
+	/*loops throuch the specifier to match the format */
 		if (*(specifier[index].type) == *format)
 			break;
 	}
