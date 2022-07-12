@@ -35,7 +35,6 @@ int print_d(va_list i)
 		}
 
 	}
-	
 	return (counter);
 }
 
