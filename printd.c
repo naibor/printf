@@ -10,7 +10,16 @@
 int print_d(va_list i)
 {
 	int d = va_arg(i, int);
-
+	
+	if (d == 0)
+	{
+		return(_putchar('0'));
+	}
+	if (d < 0)
+	{
+		d *= -1;
+		_putchar('-');
+	}
 	_putchar(d);
 	va_end(i);
 	return (0);
