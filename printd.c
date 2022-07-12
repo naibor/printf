@@ -1,5 +1,4 @@
-#include "holberton.h"
-#include <stdlib.h>
+#include "main.h"
 
 /**
  * print_d - A function that prints a decimal base 10
