@@ -10,7 +10,7 @@
 int print_d(va_list i)
 {
 	int d = va_arg(i, int);
-	counter = 0;
+	int counter = 0;
 
 	if (d == 0)
 	{
@@ -21,9 +21,7 @@ int print_d(va_list i)
 		d *= -1;
 		_putchar('-');
 		counter++;
-	}
-
-	}
+	}	
 	_putchar(d);
 	va_end(i);
 	return (0);
