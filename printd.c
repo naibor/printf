@@ -33,7 +33,9 @@ int print_d(va_list i)
 			_putchar('0' + x[j]);
 			counter++;
 		}
+
 	}
+	
 	return (counter);
 }
 
