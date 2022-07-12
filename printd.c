@@ -12,6 +12,10 @@ int print_d(va_list i)
 	int d = va_arg(i, int);
 	counter = 0;
 
+	if (d == 0)
+	{
+		return(_putchar('0'));
+	}
 	if (d < 0)
 	{
 		d *= -1;
@@ -19,6 +23,7 @@ int print_d(va_list i)
 		counter++;
 	}
 
+	}
 	_putchar(d);
 	va_end(i);
 	return (0);
