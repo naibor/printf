@@ -25,7 +25,7 @@ int print_d(va_list d);
 int print_i(va_list i);
 int print_x(va_list x);
 int print_u(va_list u);
-char *convert(unsigned int num, int base);
+char *convert(unsigned int num, int base, int lowercase);
 int print_b(va_list b);
 int print_r(va_list r);
 int print_R(va_list R);
