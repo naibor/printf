@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * print_R - A function that prints a string in rot13 format
+ * print_r - A function 
  * @R: string to print
  * Return: number of printed characters
  */
