@@ -25,4 +25,5 @@ int print_d(va_list d);
 int print_i(va_list i);
 int print_x(va_list x);
 int print_u(va_list u);
+char *convert(unsigned int num, int base);
 #endif
