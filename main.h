@@ -29,5 +29,10 @@ char *convert(unsigned int num, int base, int lowercase);
 int print_b(va_list b);
 int print_r(va_list r);
 int print_R(va_list R);
+<<<<<<< HEAD
 int print_o(va_list o);
+=======
+int print_p(va_list p);
+int print_S(va_list S);
+>>>>>>> 18ba6c8bcedcc29943435b90583cf8edb1d2bd18
 #endif
