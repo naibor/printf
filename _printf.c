@@ -22,6 +22,7 @@ int (*get_format(const char *format))(va_list)
 		{"u", print_u},
 		{"R", print_R},
 		{"r", print_r},
+		{"o", print_o},
 		{NULL, NULL}
 	};
 
