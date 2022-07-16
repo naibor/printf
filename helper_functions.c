@@ -28,18 +28,22 @@ void print_number(int n)
  *
  * Return: returns a char pointer.
  */
-char *convert(unsigned int num, int base)
+char *convert(unsigned int num, int base, int lowercase)
 {
-	static char Hx[]="0123456789ABCDEF", buffer[50];
+	static char *Hx;
+	static char buffer[50];
 	char *ptr;
-
+	
 	ptr = &buffer[49];
 	*ptr = '\0';
-	
+
+	Hx = (lowercase)
+		? "0123456789abcdef"
+		: "0123456789ABCDEF"; 
 
 	do
 	{
-		*ptr = Hx[num % base];
+		*--ptr = Hx[num % base];
 		num /= base;
 	}while(num != 0);
 
