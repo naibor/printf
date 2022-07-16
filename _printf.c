@@ -46,7 +46,7 @@ int _printf(const char *format, ...)
 	va_list a_list;
 	int (*f)(va_list);
 	unsigned int index = 0, count = 0;
-	
+
 	if (!format || format == NULL)
 		return (-1);
 	va_start(a_list, format);

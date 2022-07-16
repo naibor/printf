@@ -25,6 +25,7 @@ void print_number(int n)
  *
  * @num: unsigned int parameter, number to be converted
  * @base: int parameter , base to be converted to
+ * @lowercase:int parameter
  *
  * Return: returns a char pointer.
  */
@@ -33,20 +34,16 @@ char *convert(unsigned int num, int base, int lowercase)
 	static char *Hx;
 	static char buffer[50];
 	char *ptr;
-	
+
 	ptr = &buffer[49];
 	*ptr = '\0';
 
 	Hx = (lowercase)
 		? "0123456789abcdef"
-		: "0123456789ABCDEF"; 
-
-	do
-	{
+		: "0123456789ABCDEF";
+	do {
 		*--ptr = Hx[num % base];
 		num /= base;
-	}while(num != 0);
-
-	return (ptr);	
-
+	} while (num != 0);
+	return (ptr);
 }

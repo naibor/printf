@@ -2,8 +2,8 @@
 #include <stdlib.h>
 
 /**
- * print_r - A function 
- * @R: string to print
+ * print_r - A function
+ * @r: string to print
  * Return: number of printed characters
  */
 int print_r(va_list r)
