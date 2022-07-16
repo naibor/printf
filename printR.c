@@ -6,7 +6,7 @@
  * @R: string to print
  * Return: number of printed characters
  */
-int print_R(va_list R)
+int print_r(va_list r)
 {
 	char *str;
 	unsigned int i = 0, j = 0;
@@ -14,7 +14,7 @@ int print_R(va_list R)
 	char in[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 	char out[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
-	str = va_arg(R, char *);
+	str = va_arg(r, char *);
 	if (str == NULL)
 		str = "(ahyy)";
 	for (; str[i]; i++)
