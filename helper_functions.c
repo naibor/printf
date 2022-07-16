@@ -19,3 +19,30 @@ void print_number(int n)
 
 	_putchar(n % 10 + '0');
 }
+/**
+ * convert - Function
+ * Description: Converts numbers to their bases
+ *
+ * @num: unsigned int parameter, number to be converted
+ * @base: int parameter , base to be converted to
+ *
+ * Return: returns a char pointer.
+ */
+char *convert(unsigned int num, int base)
+{
+	static char Hx[]="0123456789ABCDEF", buffer[50];
+	char *ptr;
+
+	ptr = &buffer[49];
+	*ptr = '\0';
+	
+
+	do
+	{
+		*ptr = Hx[num % base];
+		num /= base;
+	}while(num != 0);
+
+	return (ptr);	
+
+}
