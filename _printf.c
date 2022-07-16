@@ -18,6 +18,8 @@ int (*get_format(const char *format))(va_list)
 		{"d", print_d},
 		{"i", print_i},
 		{"u", print_u},
+		{"b", print_b},
+		{"r", print_r},
 		{NULL, NULL}
 	};
 
