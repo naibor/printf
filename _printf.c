@@ -22,12 +22,9 @@ int (*get_format(const char *format))(va_list)
 		{"u", print_u},
 		{"R", print_R},
 		{"r", print_r},
-<<<<<<< HEAD
 		{"o", print_o},
-=======
 		{"p", print_p},
 		{"S", print_S},
->>>>>>> 18ba6c8bcedcc29943435b90583cf8edb1d2bd18
 		{NULL, NULL}
 	};
 
