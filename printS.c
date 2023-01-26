@@ -1,12 +1,12 @@
 #include "main.h"
 /**
- * print_S - A function
+ * print_Ss - A function
  * Description: prints a string and nonprintable
  * character ascii values
  * @S: string to print
  * Return: number of printed characters
  */
-int print_S(va_list S)
+int print_Ss(va_list S)
 {
 	unsigned int x = 0;
 	int counter = 0;

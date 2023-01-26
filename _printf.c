@@ -18,16 +18,13 @@ int (*get_format(const char *format))(va_list)
 		{"d", print_d},
 		{"i", print_i},
 		{"b", print_b},
-		{"x", print_x},
 		{"u", print_u},
-		{"R", print_R},
-		{"r", print_r},
-<<<<<<< HEAD
 		{"o", print_o},
-=======
-		{"p", print_p},
+		{"x", print_x},
 		{"S", print_S},
->>>>>>> 18ba6c8bcedcc29943435b90583cf8edb1d2bd18
+		{"p", print_p},
+		{"r", print_r},
+		{"R", print_R},
 		{NULL, NULL}
 	};
 

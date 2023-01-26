@@ -2,7 +2,7 @@
 
 /**
  * print_o - Function to print int in octal notation
- * @o: unsihned int to print
+ * @o: unsigned int to print
  * Return: number of printed digits
  */
 
@@ -22,10 +22,10 @@ int print_o(va_list o)
 	for (y = 0; y <11; y++)
 	{
 		sum += x[y];
-		if (sum || j == 10)
+		if (sum || y == 10)
 		{
 			_putchar('0' + x[y]);
-			count++
+			count++;
 		}
 	}
 	return (count);
